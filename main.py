@@ -6,7 +6,7 @@ from get_weather_forecast import get_weather
 from get_time import get_time
 
 # Токен вашего бота
-Token = open('venv/.gitignore').read()
+Token = open('shelf/ignore/api.txt').read()
 
 TOKEN = Token
 bot = Bot(token=TOKEN)
