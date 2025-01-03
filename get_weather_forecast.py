@@ -10,16 +10,14 @@ from selenium.common.exceptions import WebDriverException
 
 user_drivers = {}
 
-# Настройки Selenium
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 
 browser = webdriver.Chrome(options=chrome_options)
-browser.get('about:blank')  # Загружаем пустую страницу, чтобы браузер был готов
+browser.get('about:blank')
 
-# Популярные города и соответствующие им коды
 POPULAR_CITIES = {
     "Москва": "moscow",
     "Санкт-Петербург": "saint-petersburg",
@@ -31,7 +29,6 @@ POPULAR_CITIES = {
 YANDEX_URL = "https://yandex.ru/pogoda/ru-RU/{}/details"
 YANDEX_URL_DAY = "https://yandex.ru/pogoda/{}"
 
-# Временные зоны городов
 CITY_TIMEZONES = {
     "Москва": "Europe/Moscow",
     "Санкт-Петербург": "Europe/Moscow",
