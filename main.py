@@ -6,9 +6,8 @@ from get_weather_forecast import get_weather
 from get_time import get_time
 
 # Токен вашего бота
-Token = open('api.txt').read()
+TOKEN = open('api.txt').read()
 
-TOKEN = Token
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
