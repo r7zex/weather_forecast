@@ -1,1 +1,4 @@
 /api.txt
+/venv/include/
+/venv/Scripts/
+/venv/pyvenv.cfg

@@ -14,7 +14,7 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 browser = webdriver.Chrome(options=chrome_options)
 
 
-url = "https://yandex.ru/pogoda/{}"
+YANDEX_URL = "https://yandex.ru/pogoda/{}"
 
 
 async def open_new_tab(url):
@@ -35,7 +35,7 @@ async def close_current_tab():
 
 async def get_time(city):
     try:
-        await open_new_tab(url.format(city))
+        await open_new_tab(YANDEX_URL.format(city))
 
         WebDriverWait(browser, 20).until(
             ec.presence_of_element_located((By.CLASS_NAME, "fact__time"))
